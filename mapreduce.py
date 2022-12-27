@@ -13,8 +13,9 @@ def reducer(acc, val):
         acc[val[0]] = 0 + val[1]
     else:
         acc[val[0]] = 0 + val[1] + val[1]
-        
+
 
 type_animals = list(map(pick_animal_type, animals))
 print(type_animals)
-reduce(reducer, type_animals, {})
+animals_type_count = reduce(reducer, type_animals, {})
+print(animals_type_count)
